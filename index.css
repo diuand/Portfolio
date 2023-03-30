@@ -9,10 +9,13 @@ body{
 .home_background{
     background-color: #292929;
 }
+.home_background_mobile{
+    background-image: url("img/banner.jpg");
+}
 .mobile_menu{
     background-image: url("img/banner.jpg");
 }
-.skills-bg{
+.skills_background{
     background-image: url(img/skills-bg.jpg);
 }
 /* logo */
@@ -145,7 +148,7 @@ body{
     color: white;
     border-bottom: none;
     transition-property: color ,border-bottom;
-    transition-duration: 0.6s;
+    transition-duration: 0.1s;
 }
 
 .projects_list a:hover{
@@ -158,6 +161,25 @@ body{
 .zoom_hover_links a:hover{
     scale: 1.05;
     
+}
+
+/* bottom link list */
+.list_bottom_links a{
+    text-decoration: none;
+    color: white;
+    transition: all .2s ease-in;
+}
+.list_bottom_links a:nth-child(1):hover{
+    color: #0077b5;
+}
+.list_bottom_links a:nth-child(2):hover{
+    color: #7b7b7b;
+}
+.list_bottom_links a:nth-child(3):hover{
+    color: #ffc107
+}
+.list_bottom_links a:nth-child(4):hover{
+    color: #E1306C
 }
 
 /* Sections */
@@ -192,8 +214,8 @@ body{
 
 /* change page buttons */
 .change_page{
-    top: 50%;
-    left: 95vw;
+    top: 45%;
+    right: 2%;
 }
 .prev:hover{
     opacity: 0.5;
