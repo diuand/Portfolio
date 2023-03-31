@@ -80,23 +80,23 @@ prev_btn.addEventListener('click',()=>{
     });
 })
 
-window.addEventListener('wheel',(e )=>{
-    const delata = e.deltaY
-    const next_btn_click = new Event('click')
-    const current_time = new Date().getTime()
+// window.addEventListener('wheel',(e )=>{
+//     const delata = e.deltaY
+//     const next_btn_click = new Event('click')
+//     const current_time = new Date().getTime()
 
-    if (current_time - last_time < animation_duration){
-        e.preventDefault()
-        return
-    }
+//     if (current_time - last_time < animation_duration){
+//         e.preventDefault()
+//         return
+//     }
 
-    if (delata > 0 ){
-        next_btn.dispatchEvent(next_btn_click)
-    }else{
-        prev_btn.dispatchEvent(next_btn_click)
-    }
-    last_time = current_time
-})
+//     if (delata > 0 ){
+//         next_btn.dispatchEvent(next_btn_click)
+//     }else{
+//         prev_btn.dispatchEvent(next_btn_click)
+//     }
+//     last_time = current_time
+// })
 
 
 home_button.addEventListener('click', ()=>{
@@ -105,6 +105,18 @@ home_button.addEventListener('click', ()=>{
     set_initial_state()
     console.log('ok')
 });
+
+
+// text animation
+
+
+var typed = new Typed('#text_animation', {
+    strings: ['Software Tester','<span class="text-danger">Hardware Developer</span>', '<span class="text-warning">Frontend Developer</span>'],
+    loop:true,
+    typeSpeed: 70,
+    backSpeed: 50,
+    backDelay: 1000,
+  });
 
 // mobile
 

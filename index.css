@@ -17,6 +17,13 @@ body{
 }
 .skills_background{
     background-image: url(img/skills-bg.jpg);
+    background-position: center;
+    background-size: cover;
+}
+.career_background{
+    background-image: url("img/testimonial-bg.jpg");
+    background-position: center;
+    background-size: cover;
 }
 /* logo */
 
@@ -188,7 +195,6 @@ body{
     position: relative;
 }
 .text{
-    position: absolute;
     opacity: 0;
     transform: translateY(100px);
     transition: all 0.5s 0.5s;
@@ -204,7 +210,8 @@ body{
 }
 .nav-desktop{
     top: 0;
-    left: 45%;
+    
+    left:calc(50% - 150px/2);
     width: 100vw;
 }
 .side_menu_button:hover{
@@ -224,16 +231,50 @@ body{
     opacity: 0.5;
 }
 
-@media (max-width: 1000px) {
-    .change_page {
-        
-      opacity: 0;
+
+/* skills */
+.content_desktop{
+    padding-top: 150px;
+}
+@media only screen and (max-width: 770px) {
+    .content_desktop {
+      padding-top: 100px;
+    }
+    
+  }
+  @media only screen and (max-width: 1000px) {
+    .tools a img{
+        height: 30px;
+        width: 30px;
+    }
+    .carousel-cell{
+        width: 70% !important;
     }
   }
-
-
-
-  
+@media only screen and (min-height: 1200px) {
+    .content_desktop {
+        padding-top: 350px;
+    }
+    .content_2k{
+        padding-top: 250px;
+        font-size: larger;
+    }
+   
+  }
+  @media only screen and (min-height: 1000px) {
+    .content_2k{
+        padding-top: 150px;
+        font-size: larger;
+    }
+    .tools a img{
+        height: 40px;
+        width: 40px;
+    }
+  }
+ 
+.tools a{
+    text-decoration: none;
+}  
 /* MOBILE */
 
  /* navbar     */
@@ -255,3 +296,31 @@ body{
 
 
 
+/* external css: flickity.css */
+
+
+
+.carousel-cell {
+  width: 34%;
+  height: 500px;
+  margin-right: 10px;
+  border: 2px solid rgb(80, 80, 80);
+  border-radius: 5px;
+}
+/* position outside */
+.flickity-prev-next-button.previous {
+    left: -50px !important;
+  }
+  .flickity-prev-next-button.next {
+    right: -50px  !important;
+  }
+/* white circles */
+.flickity-page-dots .dot {
+    background: rgb(80, 80, 80) !important;
+  }
+
+  @media only screen and (max-width: 500px) {
+    .carousel-cell{
+        width: 90% !important;
+    }
+  }
