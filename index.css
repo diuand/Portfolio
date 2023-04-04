@@ -25,6 +25,16 @@ body{
     background-position: center;
     background-size: cover;
 }
+.projects_background{
+    background-image: url("img/timeline.jpg");
+    background-position: center;
+    background-size: cover;
+}
+.contact_background{
+    background-image: url(img/skills-bg.jpg);
+    background-position: center;
+    background-size: cover;
+}
 /* logo */
 
 #logo :hover .logo_name {
@@ -170,6 +180,23 @@ body{
     
 }
 
+/* hover colors */
+.hover_blue{
+    text-decoration: none;
+    color: white;
+    transition: all .1s ease-in;
+}
+.hover_blue:hover{
+    color: #ffc107
+}
+.hover_grey{
+    text-decoration: none;
+    color: white;
+    transition: all .1s ease-in;
+}
+.hover_grey:hover{
+    color: #7b7b7b;
+}
 /* bottom link list */
 .list_bottom_links a{
     text-decoration: none;
@@ -270,8 +297,16 @@ body{
         height: 40px;
         width: 40px;
     }
+    
+  }
+  @media only screen and (max-width: 400px) {
+    .carousel-cell{
+        height: 600px !important;
+    }
   }
  
+
+  
 .tools a{
     text-decoration: none;
 }  
@@ -301,10 +336,10 @@ body{
 
 
 .carousel-cell {
-  width: 34%;
+  width: 39%;
   height: 500px;
   margin-right: 10px;
-  border: 2px solid rgb(80, 80, 80);
+  border: 2px solid #ffc107;
   border-radius: 5px;
 }
 /* position outside */
