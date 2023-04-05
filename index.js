@@ -100,10 +100,8 @@ prev_btn.addEventListener('click',()=>{
 
 
 home_button.addEventListener('click', ()=>{
-    console.log('Intrat')
     initial_index = 0
     set_initial_state()
-    console.log('ok')
 });
 
 
@@ -138,4 +136,45 @@ if (window.innerWidth < 577){
         console.log('dassda')
         contact_mobile.classList.add('invert_colors')
     })
+}
+
+// send mails
+
+var mail  = document.getElementById("email");
+var message_data = document.getElementById("message");
+var name_sender = document.getElementById('name')    
+
+var mail_mobile  = document.getElementById("email_mobile");
+var message_data_mobile = document.getElementById("message_mobile");
+var name_sender_mobile = document.getElementById('name_mobile') 
+
+    // Define the Send_email function
+    function Send_email(){
+        Email.send({
+            Host : "smtp.elasticemail.com",
+            Username : "nicoara.andrei98@gmail.com ",
+            Password : "30EE123EEF3D05B8DBD1ACAB04CC9563D9F0",
+            From : 'nicoara.andrei98@gmail.com',
+            To : 'nicoara.andrei98@gmail.com',
+            ReplyFrom : mail.value,
+            Subject : ` mail from ${mail.value}`,
+            Body :  ` name : ${name_sender.value} \r\n mail from : ${mail.value} \r\n message: ${message_data.value} `
+        }).then(
+          message => alert("MESSSAGE SENT")
+        );
+    }
+// Define the Send_email function
+function Send_email_mobile(){
+    Email.send({
+        Host : "smtp.elasticemail.com",
+        Username : "nicoara.andrei98@gmail.com ",
+        Password : "30EE123EEF3D05B8DBD1ACAB04CC9563D9F0",
+        From : 'nicoara.andrei98@gmail.com',
+        To : 'nicoara.andrei98@gmail.com',
+        ReplyFrom : mail_mobile.value,
+        Subject : ` mail from ${mail_mobile.value}`,
+        Body :  ` name : ${name_sender_mobile.value} \r\n mail from : ${mail_mobile.value} \r\n message: ${message_data_mobile.value} `
+    }).then(
+      message => alert("MESSSAGE SENT")
+    );
 }
